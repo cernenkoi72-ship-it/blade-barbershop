@@ -1,0 +1,92 @@
+/* CHERNENKO SITES / BLADE — Noir Precision editorial redesign.
+   The booking service/master/date/time/demo logic remains in script.js. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@400;500;600;700&display=swap');
+:root{--gold:#D5AE7C;--dark:#141312;--muted:#B1A79B;--line:#45413C}
+html{scroll-padding-top:92px}body{font-family:"DM Sans","Segoe UI",Arial,sans-serif;background:#121211;color:#EEEAE2}
+::selection{background:#D5AE7C;color:#12110E}
+.container{width:min(1360px,calc(100% - 88px))}
+.site-header{background:rgba(17,17,16,.96);border-bottom:1px solid #393630}
+.header-inner{height:100px}.brand,.footer-brand{font-family:Oswald,Impact,sans-serif;font-size:38px;letter-spacing:.02em;line-height:.9}
+.brand span,.footer-brand span{color:#D5AE7C}.brand small,.footer-brand small{font-family:"DM Sans",sans-serif;font-size:8px;letter-spacing:.35em;margin-top:12px;color:#AF9C88}
+.nav{gap:33px}.nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#D4CDC2}
+.nav .nav-book{border:1px solid #D5AE7C;color:#D5AE7C;padding:16px 23px}
+.nav a:hover{color:#EDCE9E}
+.btn{border-radius:0;letter-spacing:.075em;text-transform:uppercase;font-size:12px;padding:19px 25px}
+.btn-gold{background:#D5AE7C;border-color:#D5AE7C;color:#1D1610}
+.btn-gold:hover{background:#EDC99A}
+.text-link{text-transform:uppercase;letter-spacing:.09em;font-size:12px}
+.hero{background:radial-gradient(circle at 12% 30%,#22211E,#121211 53%);border-bottom:1px solid #322F2B}
+.hero-grid{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);min-height:760px;gap:55px}
+.hero-copy{padding:90px 0 55px;min-width:0;position:relative}
+.overline,.eyebrow{color:#D5AE7C;font-size:11px;letter-spacing:.22em}
+.hero h1{font-family:Oswald,Impact,"Arial Narrow",sans-serif;font-size:clamp(76px,8.2vw,146px);font-weight:600;letter-spacing:-.038em;line-height:.96;margin:40px 0 30px}
+.hero h1 em{font-style:normal;color:#D5AE7C}
+.hero-text{font-size:17px;line-height:1.8;max-width:520px;color:#BDB6AB}
+.hero-actions{margin-top:42px;gap:25px}
+.hero-bottom{border-top:1px solid #3F3A33;margin-top:auto;padding-top:55px;color:#928C83;letter-spacing:.18em;font-size:10px}
+.hero-photo{min-height:720px;position:relative;filter:saturate(.57) contrast(1.06);box-shadow:28px 28px 0 #29241E}
+.hero-photo::after{content:"";position:absolute;inset:0;border:12px solid rgba(15,15,15,.18);pointer-events:none}
+.photo-label{left:30px;bottom:52px}.photo-label strong{font-family:Oswald,Impact,sans-serif;font-size:clamp(55px,5vw,85px);line-height:.92;letter-spacing:-.025em}
+.photo-label span,.photo-caption{letter-spacing:.24em}
+.ticker{background:#D5AE7C;color:#21180F}.ticker-inner{min-height:75px}.ticker span{font-size:12px;letter-spacing:.17em}.ticker b{color:#6E4529}
+.section{padding:110px 0;scroll-margin-top:95px}
+.section h2{font-family:Oswald,Impact,sans-serif;font-size:clamp(56px,6vw,98px);font-weight:600;line-height:1.02;letter-spacing:-.025em}
+.section-description{line-height:1.7;font-size:15px}
+.section-top{gap:70px}
+.services-section{background:#E9E3D8;color:#221E1A}
+.services-section .eyebrow{color:#845E3D}
+.services-section h2 span{color:#9B7557}
+.services-section .section-description{color:#6B6056}
+.services-list{border-top:2px solid #35291F}
+.service-item{border-bottom:1px solid #BDB2A4;padding:30px 0;background:transparent;gap:24px}
+.service-item:hover{background:rgba(255,255,255,.3);transform:none}
+.service-number{font-family:Oswald,Impact,sans-serif;color:#9D8167;font-size:19px}
+.service-info h3{font-family:Oswald,Impact,sans-serif;font-size:clamp(27px,3vw,43px);font-weight:500;letter-spacing:-.02em}
+.service-info p{color:#655B51}.duration{color:#806C59}
+.service-side strong{font-family:Oswald,Impact,sans-serif;font-size:27px}
+.service-select{border:1px solid #3C2B20;color:#382A1D;padding:14px 18px;letter-spacing:.08em;font-size:11px}
+.service-select:hover{background:#2D231B;color:#F5EADD}
+.atmosphere-section{background:#22211F;color:#EFE4D6}
+.atmosphere-grid{gap:100px}
+.atmosphere-photo{border-radius:0;filter:grayscale(.35);box-shadow:22px 22px 0 #36322E}
+.atmosphere-content h2{font-family:Oswald,Impact,sans-serif;font-size:clamp(57px,6vw,90px);letter-spacing:-.03em}
+.atmosphere-content p{color:#B7AFA4}
+.feature-grid{border-top:1px solid #534A40}
+.feature-grid div{border-bottom:1px solid #534A40}
+.feature-grid strong{color:#EAD7BA}
+.masters-section{background:#141313}
+.masters-grid{gap:16px}.master-card{background:#211F1D;border:1px solid #494036;overflow:hidden}
+.master-art{filter:grayscale(.5);min-height:370px}.master-info{padding:22px}
+.master-info h3{font-family:Oswald,Impact,sans-serif;font-size:31px;font-weight:500}
+.master-info p{font-size:12px;color:#AD9F90}
+.master-info button{border:1px solid #BA9A75;color:#D5AE7C;width:45px;height:45px}
+.booking-section{background:#E6DFD4;color:#251C14}
+.booking-grid{gap:70px;align-items:start}
+.booking-intro{position:sticky;top:120px}
+.booking-section .eyebrow{color:#977045}
+.booking-section h2{font-size:clamp(60px,6vw,90px)}
+.booking-section h2 span{color:#AE7F54}
+.booking-intro>p{color:#6F6257;font-size:16px;line-height:1.85}
+.booking-summary{background:#1E1A16;border:0;border-radius:0;padding:38px;color:#F3E6D5}
+.booking-summary span{color:#C5AA89;font-size:11px;letter-spacing:.15em}
+.booking-summary output{font-family:Oswald,Impact,sans-serif;font-size:clamp(44px,5vw,70px);color:#F2DEBE}
+.booking-summary small{color:#BCAF9F}
+.booking-intro .demo-note{color:#6F6257}
+.booking-form{background:#FCF9F3;border:1px solid #CFC2B3;border-radius:0;box-shadow:17px 17px 0 #D0C4B4;padding:42px}
+.form-heading{border-bottom:1px solid #C6B9AA}
+.form-heading h3{font-family:Oswald,Impact,sans-serif;font-size:27px}
+.form-heading span{color:#B2875F}
+.booking-form label{font-size:12px;letter-spacing:.03em;color:#51443A}
+.booking-form input,.booking-form select,.booking-form textarea{background:#F5F1E9;border-color:#C8BAA8;border-radius:0;color:#291F18}
+.booking-form input::placeholder{color:#85776B}
+.booking-form .submit-btn{width:100%;background:#27201A;color:#F5E5D0;border-color:#27201A;margin-top:15px}
+.booking-form .submit-btn:hover{background:#4B3727}
+.form-disclaimer{color:#76685A;font-size:12px}
+.booking-result{border-top:1px solid #C7BAA9}
+.footer{background:#111110;color:#EDE7DF;border-top:1px solid #3C3832}
+.footer a:hover{color:#D5AE7C}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:3px solid #F6B95C!important;outline-offset:4px}
+@media(max-width:1150px){.hero h1{font-size:clamp(67px,7.7vw,100px)}.hero-grid{gap:35px}.hero-photo{min-height:620px}.container{width:calc(100% - 64px)}.atmosphere-grid,.booking-grid{gap:50px}}
+@media(max-width:850px){.container{width:calc(100% - 50px)}.header-inner{height:82px}.nav{background:#191716;padding:28px 5%}.nav a{font-size:14px}.hero-grid,.atmosphere-grid,.booking-grid{grid-template-columns:1fr;gap:0}.hero-copy{padding:65px 0 40px}.hero h1{font-size:clamp(76px,12vw,115px)}.hero-photo{min-height:480px;box-shadow:14px 14px 0 #29241E}.hero-bottom{margin-top:50px}.section{padding:80px 0}.atmosphere-grid{gap:45px}.booking-grid{gap:40px}.booking-intro{position:static}.masters-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.section-top{gap:30px}.booking-form{box-shadow:10px 10px 0 #D0C4B4}}
+@media(max-width:600px){.container{width:calc(100% - 36px)}.header-inner{height:76px}.brand{font-size:32px}.hero-copy{padding:52px 0 35px}.hero h1{font-size:clamp(66px,15vw,94px);margin:26px 0 20px}.hero-text{font-size:15px}.hero-photo{min-height:405px;box-shadow:7px 8px 0 #29241E}.photo-label strong{font-size:57px}.hero-actions{gap:17px}.hero-bottom{padding-top:30px;margin-top:38px;gap:12px}.ticker-inner{gap:15px}.ticker span{font-size:9px}.section{padding:70px 0}.section h2{font-size:clamp(50px,12vw,68px)}.service-item{gap:14px;padding:22px 0}.service-info h3{font-size:30px}.service-side{gap:8px}.service-side strong{font-size:22px}.masters-grid{grid-template-columns:1fr}.master-art{min-height:330px}.booking-section h2{font-size:58px}.booking-form{padding:25px;box-shadow:6px 6px 0 #D0C4B4}.form-row{grid-template-columns:1fr}.footer-inner{gap:30px}.footer p{text-align:left}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn,.service-item,.service-select,.master-info button{transition:none!important}}
