@@ -1,0 +1,448 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+        content="BLADE — демонстрационный сайт барбершопа с выбором услуг, мастера и подготовкой записи.">
+
+  <meta name="theme-color" content="#11100f">
+  <title>BLADE — Barber Studio</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- НАВИГАЦИЯ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="BLADE — на главную">
+        BLADE<span>°</span>
+        <small>BARBER STUDIO</small>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-controls="mainNav"
+        aria-expanded="false"
+        type="button"
+      >
+        Меню <span>☰</span>
+      </button>
+
+      <nav class="nav" id="mainNav" aria-label="Основная навигация">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#about">Атмосфера</a>
+        <a href="#booking" class="nav-book">Записаться ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ПЕРВЫЙ ЭКРАН -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="overline">
+            <span class="line"></span>
+            БАРБЕР-СТУДИЯ / ДЕМО-КОНЦЕПТ
+          </div>
+
+          <h1>
+            ТВОЙ СТИЛЬ.<br>
+            <em>ТВОИ ПРАВИЛА.</em>
+          </h1>
+
+          <p class="hero-text">
+            Точная геометрия. Чистые линии.
+            Мужские стрижки и уход за бородой
+            без лишнего шума.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#booking" class="btn btn-gold">
+              Выбрать время <span>↗</span>
+            </a>
+            <a href="#services" class="text-link">
+              Смотреть услуги <span>↓</span>
+            </a>
+          </div>
+
+          <div class="hero-bottom">
+            <span>01 / 03</span>
+            <span>ПРОСТРАНСТВО ДЛЯ ТВОЕГО СТИЛЯ</span>
+          </div>
+        </div>
+
+        <div class="hero-photo" role="img"
+             aria-label="Атмосферная фотография работы барбера">
+          <div class="photo-label">
+            <span>THE ART OF</span>
+            <strong>THE CUT.</strong>
+          </div>
+          <div class="photo-caption">BLADE — VISUAL CONCEPT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЕГУЩАЯ СТРОКА -->
+    <div class="ticker" aria-hidden="true">
+      <div class="container ticker-inner">
+        <span>PRECISION CUTS</span>
+        <b>✳</b>
+        <span>BEARD DESIGN</span>
+        <b>✳</b>
+        <span>YOUR STYLE</span>
+        <b>✳</b>
+        <span>BARBER CULTURE</span>
+      </div>
+    </div>
+
+    <!-- УСЛУГИ -->
+    <section class="section services-section" id="services">
+      <div class="container">
+
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">01 / НАШИ УСЛУГИ</span>
+            <h2>ЧЁТКИЙ ПОДХОД.<br>
+              <span>НИЧЕГО ЛИШНЕГО.</span>
+            </h2>
+          </div>
+
+          <p class="section-description">
+            Выбирай услугу под свой стиль.
+            Цены и продолжительность примерные —
+            для демонстрации интерфейса.
+          </p>
+        </div>
+
+        <div class="services-list">
+
+          <article class="service-item">
+            <div class="service-number">01</div>
+            <div class="service-info">
+              <h3>Мужская стрижка</h3>
+              <p>Форма, текстура и индивидуальная укладка</p>
+              <span class="duration">60 минут</span>
+            </div>
+            <div class="service-side">
+              <strong>1 800 ₽</strong>
+              <button type="button" class="service-select"
+                      data-service="haircut">
+                Выбрать ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-number">02</div>
+            <div class="service-info">
+              <h3>Моделирование бороды</h3>
+              <p>Чистый контур, форма и уход</p>
+              <span class="duration">30 минут</span>
+            </div>
+            <div class="service-side">
+              <strong>1 000 ₽</strong>
+              <button type="button" class="service-select"
+                      data-service="beard">
+                Выбрать ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-number">03</div>
+            <div class="service-info">
+              <h3>Стрижка + борода</h3>
+              <p>Комплексный образ за одно посещение</p>
+              <span class="duration">90 минут</span>
+            </div>
+            <div class="service-side">
+              <strong>2 500 ₽</strong>
+              <button type="button" class="service-select"
+                      data-service="combo">
+                Выбрать ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="service-item">
+            <div class="service-number">04</div>
+            <div class="service-info">
+              <h3>Камуфляж седины</h3>
+              <p>Естественный тон без резких переходов</p>
+              <span class="duration">45 минут</span>
+            </div>
+            <div class="service-side">
+              <strong>1 700 ₽</strong>
+              <button type="button" class="service-select"
+                      data-service="color">
+                Выбрать ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- АТМОСФЕРА -->
+    <section class="section atmosphere-section" id="about">
+      <div class="container atmosphere-grid">
+
+        <div class="atmosphere-photo">
+          <div class="image-stamp">BLADE<br>EST. CONCEPT</div>
+        </div>
+
+        <div class="atmosphere-content">
+          <span class="eyebrow">02 / ФИЛОСОФИЯ</span>
+
+          <h2>СТИЛЬ —<br>
+            <span>ЭТО ДЕТАЛИ.</span>
+          </h2>
+
+          <p>
+            Барбершоп — не просто кресло и машинка.
+            Это внимание к форме, характеру и тому,
+            как ты хочешь выглядеть.
+          </p>
+
+          <p>
+            BLADE — концепция места, где лаконичный
+            интерьер сочетается с точной работой мастера.
+          </p>
+
+          <div class="feature-grid">
+            <div>
+              <span>01</span>
+              <strong>Индивидуальная форма</strong>
+            </div>
+            <div>
+              <span>02</span>
+              <strong>Внимание к деталям</strong>
+            </div>
+            <div>
+              <span>03</span>
+              <strong>Спокойная атмосфера</strong>
+            </div>
+            <div>
+              <span>04</span>
+              <strong>Понятные цены</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- МАСТЕРА -->
+    <section class="section masters-section" id="masters">
+      <div class="container">
+        <div class="section-top">
+          <div>
+            <span class="eyebrow">03 / КОМАНДА</span>
+            <h2>ЛЮДИ,<br><span>КОТОРЫЕ СОЗДАЮТ СТИЛЬ.</span></h2>
+          </div>
+          <p class="section-description">
+            Персонажи демонстрационного проекта.
+            Выбор мастера работает в форме записи.
+          </p>
+        </div>
+
+        <div class="masters-grid">
+
+          <article class="master-card">
+            <div class="master-art master-one">
+              <span class="master-initials">К</span>
+              <span class="master-index">01</span>
+            </div>
+            <div class="master-info">
+              <div>
+                <h3>Кирилл</h3>
+                <p>Классика и текстура</p>
+              </div>
+              <button type="button" data-master="kirill"
+                      aria-label="Выбрать мастера Кирилла">
+                ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="master-card">
+            <div class="master-art master-two">
+              <span class="master-initials">А</span>
+              <span class="master-index">02</span>
+            </div>
+            <div class="master-info">
+              <div>
+                <h3>Алексей</h3>
+                <p>Fade и современные формы</p>
+              </div>
+              <button type="button" data-master="alexey"
+                      aria-label="Выбрать мастера Алексея">
+                ↗
+              </button>
+            </div>
+          </article>
+
+          <article class="master-card">
+            <div class="master-art master-three">
+              <span class="master-initials">М</span>
+              <span class="master-index">03</span>
+            </div>
+            <div class="master-info">
+              <div>
+                <h3>Марк</h3>
+                <p>Борода и комплексный уход</p>
+              </div>
+              <button type="button" data-master="mark"
+                      aria-label="Выбрать мастера Марка">
+                ↗
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАПИСЬ -->
+    <section class="section booking-section" id="booking">
+      <div class="container booking-grid">
+
+        <div class="booking-intro">
+          <span class="eyebrow">04 / ТВОЙ ВЫБОР</span>
+
+          <h2>ВРЕМЯ<br><span>ОБНОВИТЬ СТИЛЬ.</span></h2>
+
+          <p>
+            Выбери услугу, мастера, дату и удобное время.
+            Мы сформируем текст заявки, который ты
+            сможешь скопировать.
+          </p>
+
+          <div class="booking-summary">
+            <span>ПРЕДВАРИТЕЛЬНАЯ СТОИМОСТЬ</span>
+            <output id="priceOutput" aria-live="polite">
+              1 800 ₽
+            </output>
+            <small id="durationOutput">Продолжительность: 60 минут</small>
+          </div>
+
+          <p class="demo-note">
+            Демо: доступность времени не проверяется,
+            запись на сервер не отправляется.
+          </p>
+        </div>
+
+        <form class="booking-form" id="bookingForm">
+
+          <div class="form-heading">
+            <h3>ПОДГОТОВИТЬ ЗАПИСЬ</h3>
+            <span>01 — 06</span>
+          </div>
+
+          <label for="serviceSelect">Услуга</label>
+          <select id="serviceSelect" required>
+            <option value="haircut">Мужская стрижка — 1 800 ₽</option>
+            <option value="beard">Борода — 1 000 ₽</option>
+            <option value="combo">Стрижка + борода — 2 500 ₽</option>
+            <option value="color">Камуфляж седины — 1 700 ₽</option>
+          </select>
+
+          <label for="masterSelect">Мастер</label>
+          <select id="masterSelect" required>
+            <option value="any">Любой мастер</option>
+            <option value="kirill">Кирилл</option>
+            <option value="alexey">Алексей</option>
+            <option value="mark">Марк</option>
+          </select>
+
+          <div class="form-row">
+            <div>
+              <label for="visitDate">Желаемая дата</label>
+              <input type="date" id="visitDate" required>
+            </div>
+
+            <div>
+              <label for="visitTime">Желаемое время</label>
+              <select id="visitTime" required>
+                <option value="">Выберите время</option>
+                <option>10:00</option>
+                <option>11:00</option>
+                <option>12:00</option>
+                <option>13:00</option>
+                <option>14:00</option>
+                <option>15:00</option>
+                <option>16:00</option>
+                <option>17:00</option>
+                <option>18:00</option>
+                <option>19:00</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="clientName">Ваше имя</label>
+          <input type="text" id="clientName"
+                 maxlength="60" minlength="2"
+                 placeholder="Ваше имя" required>
+
+          <label for="clientContact">Телефон или Telegram</label>
+          <input type="text" id="clientContact"
+                 maxlength="100"
+                 placeholder="+7 999 123-45-67 или @username"
+                 required>
+
+          <button class="btn btn-gold submit-btn" type="submit">
+            Сформировать заявку <span>↗</span>
+          </button>
+
+          <p class="form-disclaimer">
+            Это учебный сайт. Отправка заявки и
+            подтверждение записи не выполняются.
+          </p>
+
+          <div id="bookingResult" class="booking-result" hidden>
+            <label for="resultText">Текст заявки</label>
+            <textarea id="resultText" rows="10" readonly></textarea>
+
+            <button type="button" id="copyButton"
+                    class="btn btn-outline">
+              Скопировать текст
+            </button>
+
+            <p id="copyStatus" role="status"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ПОДВАЛ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        BLADE<span>°</span>
+        <small>BARBER STUDIO</small>
+      </div>
+
+      <div class="footer-links">
+        <a href="#services">Услуги</a>
+        <a href="#masters">Мастера</a>
+        <a href="#booking">Запись</a>
+      </div>
+
+      <p>
+        Демонстрационный проект для портфолио.<br>
+        Название, персонал и цены вымышлены. © 2026
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
